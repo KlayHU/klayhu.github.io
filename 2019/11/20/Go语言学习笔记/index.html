@@ -15,7 +15,7 @@
   <meta name="description" content="">
   <meta name="author" content="klayhu">
   <meta name="keywords" content="">
-  <title>Klayhu&#39;s Blog</title>
+  <title>Go语言学习笔记 ~ Klayhu&#39;s Blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -36,7 +36,7 @@
 
 
 <body>
-  <header style="height: 100vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -107,12 +107,43 @@
             </span>
 
             
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  Wednesday, November 20th 2019, 10:36 am
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    203 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      1 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
           </div>
 
-          
-            <div class="scroll-down-bar">
-              <i class="fas fa-angle-down scroll-down-arrow"></i>
-            </div>
           
         </div>
       </div>
@@ -121,100 +152,66 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h2 id="Go语言学习笔记"><a href="#Go语言学习笔记" class="headerlink" title="Go语言学习笔记"></a>Go语言学习笔记</h2><h3 id="Day01-："><a href="#Day01-：" class="headerlink" title="Day01  ："></a>Day01  ：</h3><h4 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h4><h5 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义:"></a>函数的定义:</h5><p> func xxx(函数名)（携带的参数）函数的返回值{    </p>
+<p>/*      函数体      */</p>
+<p>}</p>
+<p>:first_quarter_moon:</p>
+<p>eg:</p>
+<p><code>func minus(a,b int , op string ) int{}</code></p>
+<p><code>func div(c,d int)(int,int){}</code></p>
+<p><code>func multiply(e,f int)(g,h int){}</code></p>
+<p>:last_quarter_moon:</p>
+<p>:arrow_forward:作为函数式编程的语言，在Go语言中一个函数可以有多个返回值，在声明返回值的<code>return</code>语句中多个返回值中间用<code>,</code>隔开。</p>
+<p>:arrow_forward:如果在定义函数返回值时不想使用某个参数，在参数位上输入<code>_</code>下划线即可</p>
+<p>:black_flag:函数式编程规范：</p>
+<p><code>func apply(func op(int , int) int , a , b int )int{</code></p>
+<p>:arrow_double_up:解析：在apply函数中传入的参数是op这个函数和a,b两个int类型的变量，op函数返回值是int，自带两个int类型参数。</p>
 
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/11/20/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-        <p class="h4 index-header">Go语言学习笔记</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">Go语言学习笔记Day01  ：函数：函数的定义: func xxx(函数名)（携带的参数）函数的返回值{    
-/*      函数体      */
-}
-:first_quarter_moon:
-eg:
-func minus(a,b int , op string ) int{}
-func div(c,d int)(int,int){}
-func multiply(e,f int)(g,h int){}
-:last_quarter_moon:
-:arrow_forward:作为函数式编程的语言，在Go语言中一个函数可以有多个返回值，在声明返回值的return语句中多个返回值中间用,隔开。
-:arrow_forward:如果在定义函数返回值时不想使用某个参数，在参数位上输入_下划线即可
-:black_flag:函数式编程规范：
-func apply(func op(int , int) int , a , b int )int{
-:arrow_double_up:解析：在apply函数中传入的参数是op这个函数和a,b两个int类型的变量，op函数返回值是int，自带两个int类型</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-20&nbsp;&nbsp;
-        
-        
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/11/18/hello-world/">
-        <p class="h4 index-header">Hello World</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Hello Hexo !Quick StartCreate a new post1$ hexo new "My New Post"
-
-More info: Writing
-Run server1$ hexo server
-
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
-</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-18&nbsp;&nbsp;
-        
-        
-        
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-              </div>
-            </div>
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -289,6 +286,11 @@ More info: Deployment
 
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
 
   <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
@@ -329,7 +331,7 @@ More info: Deployment
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "&nbsp;",
+        "Go语言学习笔记&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
