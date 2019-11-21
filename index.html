@@ -141,19 +141,26 @@
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">Go语言学习笔记##Day01  ：函数：函数的定义:·func xxx(函数名)（携带的参数）函数的返回值{    
+          <div class="index-text mb-1">Go语言学习笔记
+##Day01  ：
+函数：
+函数的定义:
+**·**func xxx(函数名)（携带的参数）函数的返回值{
 /*      函数体      */
 }
 eg:
 func minus(a,b int , op string ) int{}
 func div(c,d int)(int,int){}
 func multiply(e,f int)(g,h int){}
-·:arrow_forward:作为函数式编程的语言，在Go语言中一个函数可以有多个返回值，在声明返回值的return语句中多个返回值中间用,隔开。
-·:arrow_forward:如果在定义函数返回值时不想使用某个参数，在参数位上输入_下划线即可
-·:black_flag:函数式编程规范：
+·▶️作为函数式编程的语言，在Go语言中一个函数可以有多个返回值，在声明返回值的return语句中多个返回值中间用,隔开。
+·▶️如果在定义函数返回值时不想使用某个参数，在参数位上输入_下划线即可
+·🏴函数式编程规范：
 func apply(func op(int , int) int , a , b int )int{
-·:arrow_double_up:解析：在apply函数中传入的参数是op这个函数和a,b两个int类型的变量，op函数返回值是int，自带两个int类型参数。
-·:artificial_satellite:定义一个参数列表</div>
+·⏫解析：在apply函数中传入的参数是op这个函数和a,b两个int类型的变量，op函数返回值是int，自带两个int类型参数。
+·🛰定义一个参数列表：
+func sum(numbers ...int)int{
+​	for i:=range numbers{
+​		s += numbe</div>
         </div>
       </a>
 
@@ -183,7 +190,8 @@ func apply(func op(int , int) int , a , b int )int{
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">写在前面</div>
+          <div class="index-text mb-1">写在前面
+</div>
         </div>
       </a>
 
