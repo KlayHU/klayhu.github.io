@@ -134,6 +134,48 @@
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/11/22/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+        <p class="h4 index-header">深入理解Java虚拟机学习笔记</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">Day01
+第2章  	Java内存区域与内存溢出异常
+2.2  运行时数据区域
+2.2.1  程序计数器
+▶️字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令。分支、循环、跳转、异常处理、线程恢复等基础功能都需要这个计数器完成。
+2.2.2  虚拟机栈
+▶️是线程私有的，它的生命周期与线程相同，其描述的是Java方法执行的内存模型。每个方法执行时都会创建一个“栈帧”，用于存储局部变量表、操作数栈、动态链接、方法出口等信息。每一个方法从调用到执行完成的过程，就对应着一个虚拟机栈的入栈出栈的过程。 (:з」∠)_
+局部变量表存放了各种基本数据类型、对象引用。64位长度的long和double占用2个局部变量空间(Slot)，其余类型只占用1个。
+在Java虚拟机规范中，对这个区域规定了两种异常情况：
+1、如果线程请求的栈深度大于虚拟机所允许的深度，将抛出StackOverflowError异常；
+2、如果虚拟机栈可以动态扩展，扩展时无法申请到足够的内存，就会抛出OutOfMemoryError异常；
+2.2.3  本地方法栈
+为虚拟机使用到的native方法服</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-22&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/JavaVM">JavaVM</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/11/21/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
         <p class="h4 index-header">Go语言学习笔记</p>
         
