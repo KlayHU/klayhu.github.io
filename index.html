@@ -166,11 +166,17 @@
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">##Day03
+          <div class="index-text mb-1">##Day03  :
 结构体和方法：
-面向对象：go语言仅支持封装，不支持继承和多态
-结构的定义
-</div>
+🔌面向对象：go语言仅支持封装，不支持继承和多态
+结构的定义：
+1234567891011type TreeNode struct &#123;    Left, Right *TreeNode    Value int&#125;//切片定义nodes := []treeNode&#123;		&#123;value:3&#125;,		&#123;&#125;,		&#123;6,nil,&amp;root&#125;,	&#125;
+为结构定义方法：
+123func (node treeNode) print()&#123;    fmt.Println(node.value)&#125;
+☑️Go语言虽然没有构造函数一说，但是可以通过工厂函数来控制。
+123func createNode(value int) *treeNode&#123;    return &amp;treeNode&#123;value:value&#125;&#125;
+使用指针作为方法接收者：
+123func (node *treeNode)setValue(v</div>
         </div>
       </a>
 
