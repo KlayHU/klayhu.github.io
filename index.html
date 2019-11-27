@@ -170,13 +170,34 @@
 结构体和方法：
 🔌面向对象：go语言仅支持封装，不支持继承和多态
 结构的定义：
-1234567891011type TreeNode struct &#123;    Left, Right *TreeNode    Value int&#125;//切片定义nodes := []treeNode&#123;		&#123;value:3&#125;,		&#123;&#125;,		&#123;6,nil,&amp;root&#125;,	&#125;
+type TreeNode struct {
+    Left, Right *TreeNode
+    Value int
+}
+
+//切片定义
+nodes := []treeNode{
+		{value:3},
+		{},
+		{6,nil,&amp;root},
+	}
+
 为结构定义方法：
-123func (node treeNode) print()&#123;    fmt.Println(node.value)&#125;
+func (node treeNode) print(){
+    fmt.Println(node.value)
+}
+
 ☑️Go语言虽然没有构造函数一说，但是可以通过工厂函数来控制。
-123func createNode(value int) *treeNode&#123;    return &amp;treeNode&#123;value:value&#125;&#125;
+func createNode(value int) *treeNode{
+    return &amp;treeNode{value:value}
+}
+
 使用指针作为方法接收者：
-123func (node *treeNode)setValue(v</div>
+func (node *treeNode)setValue(value int){
+    node.value=value
+}
+
+⚠️由于结构体是值传递，不存在引用传递。所以只有使用指针才可以改变结构内容。另：nil指针也可以调用</div>
         </div>
       </a>
 
@@ -265,7 +286,9 @@ func multiply(e,f int)(g,h int){}
 func apply(func op(int , int) int , a , b int )int{
 ·⏫解析：在apply函数中传入的参数是op这个函数和a,b两个int类型的变量，op函数返回值是int，自带两个int类型参数。
 ·🛰定义一个参数列表：
-123456func sum(numbers ...int) int&#123;    s :=0   for i := range</div>
+func sum(numbers ...int) int{
+    s :=0   for i := range numbers{
+</div>
         </div>
       </a>
 
