@@ -183,7 +183,7 @@
 }
 </code></pre>
 <p>上面的代码简单展示了协程的工作方式，在函数前加上关键字go，表明这个函数交给main协程以外的协程由调度器执行，调度器会在合适的点进行切换。而关于协程相较于线程的轻量级，在于其主协程(main)和其他协程(…goroutine)可以相互访问。如下图：</p>
-<p><img src="/2019/11/27/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/%E5%8D%8F%E7%A8%8BCoroutine" srcset="undefined" alt="协程Coroutine"></p>
+<p><img src="/2019/11/27/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/%E5%8D%8F%E7%A8%8BCoroutine.png" srcset="undefined" alt="协程Coroutine"></p>
 <p>Go语言原生支持协程，Java的一些第三方的JVM对协程支持。</p>
 <h4 id="goroutine-u-可能-u-切换的点：">goroutine<u>可能</u>切换的点：</h4>
 <p><strong>I/O,select</strong></p>
@@ -336,7 +336,7 @@ func main() {
 }
 </code></pre>
 <p>程序输出结果：</p>
-<p><img src="/2019/11/27/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/selectTest" srcset="undefined" alt="selectTest"></p>
+<p><img src="/2019/11/27/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/selectTest.png" srcset="undefined" alt="selectTest"></p>
 <h3 id="传统同步机制：">传统同步机制：</h3>
 <p><strong>WaitGroup</strong></p>
 <p><strong>Mutex 	(互斥量)</strong></p>
