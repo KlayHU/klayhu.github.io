@@ -120,7 +120,7 @@
                   
                   &nbsp;<i class="far fa-chart-bar"></i>
                   <span class="post-count">
-                    0 字
+                    827 字
                   </span>&nbsp;
                 
 
@@ -128,7 +128,7 @@
                   
                   &nbsp;<i class="far fa-clock"></i>
                   <span class="post-count">
-                      1 分钟
+                      2 分钟
                   </span>&nbsp;
                 
 
@@ -161,13 +161,38 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            
+            <h2 id="day02">Day02</h2>
+<h3 id="第六章-类文件结构">第六章  类文件结构</h3>
+<h4 id="6-3-class类文件的结构">6.3  Class类文件的结构</h4>
+<p>🔽Class文件是一组以8位字节为基础的二进制流，各个数据项目严格按照顺序紧凑地排列在Class文件中，中间没有任何分隔符，这使得整个Class文件中储存的内容几乎都是程序运行的必要数据，没有空隙存在。当遇到需要占用8个字节以上空间的数据项时，会按照高位在前的方式分割成若干个8位字节进行存储。</p>
+<p>根据Java虚拟机规范的规定，Class文件格式采用一种类似C语言结构体的伪结构来存储数据，这种伪结构中只有两种数据类型：无符号数和表，后面的解析都要与这两种数据类型为基础。</p>
+<p>↘️其中：</p>
+<p>无符号数属于基本的数据类型，以u1、u2、u4、u8来表示1个字节、2个字节、4个字节、8个字节的无符号数，无符号数可以用来描述数字、索引引用、数量值或者按照UTF-8构成字符串值。</p>
+<p>表是有多个无符号数或者其他表作为数据项构成的符合数据类型，所有表都习惯性地以“_info”结尾。表用于描述有层次关系的复合结构的数据，整个Class文件本质上就是一张表，如下图所示。</p>
+<p><img src="/2019/11/25/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/Class%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84" srcset="undefined" alt="Class文件结构"></p>
+<h5 id="6-3-1魔数与class文件的版本">6.3.1魔数与Class文件的版本</h5>
+<p>每个Class文件的头4个字节称为魔数(Magic Number)，它的唯一作用是确定这个文件是否为一个能被虚拟机接受的Class文件。紧接着魔数的4字节存储的是Class文件的版本号，Java的版本号是从45开始的。</p>
+<h5 id="6-3-2常量池">6.3.2常量池</h5>
+<p>⛅️紧接着主次版本号之后的是常量池入口，常量池可以理解为Class文件之中的资源仓库，它是Class文件结构与其他项目关联最多的数据类型，也是占用Class文件空间最大的数据项目之一，同时它还是Class文件中第一个出现的表类型数据项目。</p>
+<p>🕶由于常量池中常量的数量不是固定的，所以在常量池入口需要放置一项u2类型的数据，代表常量池容量计数值(constant_pool_count)。与Java语言习惯不一样的是，这个容量计数器是从1而不是0开始的。常量池容量为十六进制数0x0016，即十进制的22，代表常量池中有21项常量，索引范围为1-21。Class文件结构中只有常量池的容量计数是从1开始，对于其他集合类型，包括接口索引集合、字段表集合、方法表集合等的容量计数都与一般习惯相同，从0开始。</p>
+<p>常量池中主要存放两大类常量：<strong>字面量</strong>(Literal)和<strong>符号引用</strong>(Symbolic Reference)。字面量，如文本字符串、声明为final的常量值等。而符号引用则属于编译原理方面的概念，包括了下面三种常量：</p>
+<p><strong>1、类和接口的全限定名；</strong></p>
+<p><strong>2、字段的名称和描述符；</strong></p>
+<p><strong>3、方法的名称和描述符；</strong></p>
+
             <hr>
           </div>
           <br>
           <div>
             <p>
             
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/JavaVm">JavaVm</a>
+                
+              </span>
             
             </p>
             
